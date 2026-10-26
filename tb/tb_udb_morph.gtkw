@@ -1,0 +1,132 @@
+[dumpfile] "D:/PROJECTS/SoC/tb/tb_udb_morph.vcd"
+[savefile] "D:/PROJECTS/SoC/tb/tb_udb_morph.gtkw"
+[timestart] 0
+[size] 1600 900
+[pos] 0 0
+*0.500000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_udb_morph
+[sst_width] 250
+[signals_width] 200
+[sst_expanded] 1
+[sst_vpaned_height] 400
+-
+-Key Signals
+@22
+tb_udb_morph.current_ctx
+@22
+tb_udb_morph.udb_io_out
+@28
+tb_udb_morph.clk
+@28
+tb_udb_morph.rem_morph_trig
+@22
+tb_udb_morph.rem_target_ctx
+@28
+tb_udb_morph.rst_n
+@22
+tb_udb_morph.udb_io_in
+@28
+tb_udb_morph.dut.aclk
+@28
+tb_udb_morph.dut.rem_morph_trigger
+@22
+tb_udb_morph.dut.udb_io_in
+@22
+tb_udb_morph.dut.udb_io_out
+@28
+tb_udb_morph.dut.u_axislave.aclk
+@28
+tb_udb_morph.dut.u_morph.clk
+@28
+tb_udb_morph.dut.u_morph.rst_n
+@28
+tb_udb_morph.dut.u_dp.clk
+@28
+tb_udb_morph.dut.u_dp.rst_n
+@28
+tb_udb_morph.dut.u_pld.clk
+@28
+tb_udb_morph.dut.u_pld.rst_n
+-Other Signals
+@28
+tb_udb_morph.s_axi_arready
+@28
+tb_udb_morph.s_axi_awready
+@22
+tb_udb_morph.s_axi_bresp
+@28
+tb_udb_morph.s_axi_bvalid
+@22
+tb_udb_morph.s_axi_rdata
+@22
+tb_udb_morph.s_axi_rresp
+@28
+tb_udb_morph.s_axi_rvalid
+@28
+tb_udb_morph.s_axi_wready
+@22
+tb_udb_morph.s_axi_araddr
+@22
+tb_udb_morph.s_axi_arprot
+@28
+tb_udb_morph.s_axi_arvalid
+@22
+tb_udb_morph.s_axi_awaddr
+@22
+tb_udb_morph.s_axi_awprot
+@28
+tb_udb_morph.s_axi_awvalid
+@28
+tb_udb_morph.s_axi_bready
+@28
+tb_udb_morph.s_axi_rready
+@22
+tb_udb_morph.s_axi_wdata
+@22
+tb_udb_morph.s_axi_wstrb
+@28
+tb_udb_morph.s_axi_wvalid
+@28
+tb_udb_morph.dut.acc_load
+@22
+tb_udb_morph.dut.accum_out
+@22
+tb_udb_morph.dut.alu_op
+@28
+tb_udb_morph.dut.aresetn
+@22
+tb_udb_morph.dut.current_context
+@22
+tb_udb_morph.dut.datapath_dout
+@22
+tb_udb_morph.dut.effective_din
+@28
+tb_udb_morph.dut.flag_carry
+@28
+tb_udb_morph.dut.flag_sign
+@28
+tb_udb_morph.dut.flag_zero
+@22
+tb_udb_morph.dut.imm_val
+@22
+tb_udb_morph.dut.morph_cycles
+@22
+tb_udb_morph.dut.morph_reg_rdata
+@22
+tb_udb_morph.dut.pld_lut_config
+@22
+tb_udb_morph.dut.pld_out
+@22
+tb_udb_morph.dut.reg_addr
+@28
+tb_udb_morph.dut.reg_read_en
+@22
+tb_udb_morph.dut.reg_wdata
+@28
+tb_udb_morph.dut.reg_write_en
+@22
+tb_udb_morph.dut.reg_wstrb
+@22
+tb_udb_morph.dut.rem_target_context
+[pattern_trace] 1
+[pattern_trace] 0

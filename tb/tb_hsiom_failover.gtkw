@@ -1,0 +1,67 @@
+[dumpfile] "D:/PROJECTS/SoC/tb/tb_hsiom_failover.vcd"
+[savefile] "D:/PROJECTS/SoC/tb/tb_hsiom_failover.gtkw"
+[timestart] 0
+[size] 1600 900
+[pos] 0 0
+*0.500000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_hsiom_failover
+[sst_width] 280
+[signals_width] 220
+[sst_expanded] 1
+[sst_vpaned_height] 400
+-PATENT CLAIM 3: HSIOM Self-Healing Autonomous Failover
+@28
+tb_hsiom_failover.clk
+@28
+tb_hsiom_failover.rst_n
+-Top-Level I/O
+@22
+tb_hsiom_failover.pad_in[15:0]
+@22
+tb_hsiom_failover.pad_out[15:0]
+@28
+tb_hsiom_failover.uart_tx
+@28
+tb_hsiom_failover.hsiom_fault_event
+-HSIOM DUT Internals
+@28
+tb_hsiom_failover.dut.hsiom_fault_event
+@22
+tb_hsiom_failover.dut.pad_in[15:0]
+@22
+tb_hsiom_failover.dut.pad_out[15:0]
+@28
+tb_hsiom_failover.dut.uart_tx
+-Self-Healing Controller
+@28
+tb_hsiom_failover.dut.u_sh.clk
+@28
+tb_hsiom_failover.dut.u_sh.rst_n
+@28
+tb_hsiom_failover.dut.u_sh.primary_pad_in
+@28
+tb_hsiom_failover.dut.u_sh.primary_pad_out
+-Pin 0 (Primary UART pin — watch failover to pin 1)
+@28
+tb_hsiom_failover.dut.HSIOM_PINS[0].u_cell.pad_in
+@28
+tb_hsiom_failover.dut.HSIOM_PINS[0].u_cell.sig_uart
+@28
+tb_hsiom_failover.dut.HSIOM_PINS[0].u_cell.sig_gpio
+@28
+tb_hsiom_failover.dut.HSIOM_PINS[0].u_cell.pad_oe
+@28
+tb_hsiom_failover.dut.HSIOM_PINS[0].u_cell.pad_out
+-Pin 1 (Backup UART pin — goes active on fault)
+@28
+tb_hsiom_failover.dut.HSIOM_PINS[1].u_cell.pad_in
+@28
+tb_hsiom_failover.dut.HSIOM_PINS[1].u_cell.sig_uart
+@28
+tb_hsiom_failover.dut.HSIOM_PINS[1].u_cell.sig_gpio
+@28
+tb_hsiom_failover.dut.HSIOM_PINS[1].u_cell.pad_oe
+@28
+tb_hsiom_failover.dut.HSIOM_PINS[1].u_cell.pad_out
+[pattern_trace] 1
+[pattern_trace] 0

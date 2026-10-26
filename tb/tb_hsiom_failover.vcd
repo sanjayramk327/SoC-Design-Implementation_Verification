@@ -1,0 +1,1094 @@
+$date
+	Sat Sep 12 10:21:28 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_hsiom_failover $end
+$var wire 1 ! hsiom_fault_event $end
+$var wire 16 " pad_oe [15:0] $end
+$var wire 16 # pad_out [15:0] $end
+$var wire 1 $ s_axi_arready $end
+$var wire 1 % s_axi_awready $end
+$var wire 2 & s_axi_bresp [1:0] $end
+$var wire 1 ' s_axi_bvalid $end
+$var wire 32 ( s_axi_rdata [31:0] $end
+$var wire 2 ) s_axi_rresp [1:0] $end
+$var wire 1 * s_axi_rvalid $end
+$var wire 1 + s_axi_wready $end
+$var wire 1 , uart_rx $end
+$var reg 1 - clk $end
+$var reg 16 . gpio_dr [15:0] $end
+$var reg 16 / pad_in [15:0] $end
+$var reg 1 0 rst_n $end
+$var reg 12 1 s_axi_araddr [11:0] $end
+$var reg 3 2 s_axi_arprot [2:0] $end
+$var reg 1 3 s_axi_arvalid $end
+$var reg 12 4 s_axi_awaddr [11:0] $end
+$var reg 3 5 s_axi_awprot [2:0] $end
+$var reg 1 6 s_axi_awvalid $end
+$var reg 1 7 s_axi_bready $end
+$var reg 1 8 s_axi_rready $end
+$var reg 32 9 s_axi_wdata [31:0] $end
+$var reg 4 : s_axi_wstrb [3:0] $end
+$var reg 1 ; s_axi_wvalid $end
+$var reg 1 < snn_spike $end
+$var reg 1 = tcpwm_nout0 $end
+$var reg 1 > tcpwm_out0 $end
+$var reg 1 ? uart_tx $end
+$var reg 8 @ udb_out [7:0] $end
+$scope module dut $end
+$var wire 1 A aclk $end
+$var wire 4 B active_backup [3:0] $end
+$var wire 1 C aresetn $end
+$var wire 16 D contention_cnt [15:0] $end
+$var wire 1 E failover_active $end
+$var wire 1 F fault_det $end
+$var wire 16 G gpio_dr [15:0] $end
+$var wire 1 ! hsiom_fault_event $end
+$var wire 16 H pad_in [15:0] $end
+$var wire 16 I pad_oe [15:0] $end
+$var wire 16 J pad_out [15:0] $end
+$var wire 16 K periph_in_bus [15:0] $end
+$var wire 12 L reg_addr [11:0] $end
+$var wire 1 M reg_read_en $end
+$var wire 32 N reg_wdata [31:0] $end
+$var wire 1 O reg_write_en $end
+$var wire 4 P reg_wstrb [3:0] $end
+$var wire 12 Q s_axi_araddr [11:0] $end
+$var wire 3 R s_axi_arprot [2:0] $end
+$var wire 1 $ s_axi_arready $end
+$var wire 1 S s_axi_arvalid $end
+$var wire 12 T s_axi_awaddr [11:0] $end
+$var wire 3 U s_axi_awprot [2:0] $end
+$var wire 1 % s_axi_awready $end
+$var wire 1 V s_axi_awvalid $end
+$var wire 1 W s_axi_bready $end
+$var wire 2 X s_axi_bresp [1:0] $end
+$var wire 1 ' s_axi_bvalid $end
+$var wire 32 Y s_axi_rdata [31:0] $end
+$var wire 1 Z s_axi_rready $end
+$var wire 2 [ s_axi_rresp [1:0] $end
+$var wire 1 * s_axi_rvalid $end
+$var wire 32 \ s_axi_wdata [31:0] $end
+$var wire 1 + s_axi_wready $end
+$var wire 4 ] s_axi_wstrb [3:0] $end
+$var wire 1 ^ s_axi_wvalid $end
+$var wire 1 _ snn_spike $end
+$var wire 1 ` tcpwm_nout0 $end
+$var wire 1 a tcpwm_out0 $end
+$var wire 1 , uart_rx $end
+$var wire 1 b uart_tx $end
+$var wire 8 c udb_out [7:0] $end
+$var reg 4 d backup_pin_sel [3:0] $end
+$var reg 1 e failover_en $end
+$var reg 8 f fault_thresh [7:0] $end
+$var integer 32 g j [31:0] $end
+$var reg 32 h reg_rdata [31:0] $end
+$scope module u_axislave $end
+$var wire 1 A aclk $end
+$var wire 1 C aresetn $end
+$var wire 1 i reg_ack $end
+$var wire 12 j reg_addr [11:0] $end
+$var wire 32 k reg_rdata [31:0] $end
+$var wire 1 M reg_read_en $end
+$var wire 32 l reg_wdata [31:0] $end
+$var wire 1 O reg_write_en $end
+$var wire 4 m reg_wstrb [3:0] $end
+$var wire 12 n s_axi_araddr [11:0] $end
+$var wire 3 o s_axi_arprot [2:0] $end
+$var wire 1 S s_axi_arvalid $end
+$var wire 12 p s_axi_awaddr [11:0] $end
+$var wire 3 q s_axi_awprot [2:0] $end
+$var wire 1 V s_axi_awvalid $end
+$var wire 1 W s_axi_bready $end
+$var wire 1 Z s_axi_rready $end
+$var wire 32 r s_axi_wdata [31:0] $end
+$var wire 4 s s_axi_wstrb [3:0] $end
+$var wire 1 ^ s_axi_wvalid $end
+$var reg 12 t araddr_reg [11:0] $end
+$var reg 1 u aw_en $end
+$var reg 12 v awaddr_reg [11:0] $end
+$var reg 1 w s_axi_arready $end
+$var reg 1 x s_axi_awready $end
+$var reg 2 y s_axi_bresp [1:0] $end
+$var reg 1 z s_axi_bvalid $end
+$var reg 32 { s_axi_rdata [31:0] $end
+$var reg 2 | s_axi_rresp [1:0] $end
+$var reg 1 } s_axi_rvalid $end
+$var reg 1 ~ s_axi_wready $end
+$upscope $end
+$scope module u_sh $end
+$var wire 4 !" backup_pin_index [3:0] $end
+$var wire 1 A clk $end
+$var wire 1 "" contention $end
+$var wire 1 #" failover_enable $end
+$var wire 8 $" fault_threshold [7:0] $end
+$var wire 1 %" primary_pad_in $end
+$var wire 1 &" primary_pad_oe $end
+$var wire 1 '" primary_pad_out $end
+$var wire 1 C rst_n $end
+$var reg 4 (" active_backup_pin [3:0] $end
+$var reg 16 )" contention_counter [15:0] $end
+$var reg 1 *" failover_active $end
+$var reg 1 +" pin_fault_detected $end
+$upscope $end
+$scope begin HSIOM_PINS[0] $end
+$var wire 3 ," eff_dm [2:0] $end
+$var wire 3 -" eff_mux [2:0] $end
+$var wire 1 ." is_active_backup $end
+$var wire 1 /" is_faulted_primary $end
+$scope module u_cell $end
+$var wire 3 0" drive_mode [2:0] $end
+$var wire 3 1" mux_sel [2:0] $end
+$var wire 1 2" pad_in $end
+$var wire 1 3" periph_in $end
+$var wire 1 4" sig_gpio $end
+$var wire 1 _ sig_snn $end
+$var wire 1 ` sig_tcpwm $end
+$var wire 1 b sig_uart $end
+$var wire 1 5" sig_udb $end
+$var reg 1 6" pad_oe $end
+$var reg 1 7" pad_out $end
+$var reg 1 8" selected_tx $end
+$upscope $end
+$upscope $end
+$scope begin HSIOM_PINS[1] $end
+$var wire 3 9" eff_dm [2:0] $end
+$var wire 3 :" eff_mux [2:0] $end
+$var wire 1 ;" is_active_backup $end
+$var wire 1 <" is_faulted_primary $end
+$scope module u_cell $end
+$var wire 3 =" drive_mode [2:0] $end
+$var wire 3 >" mux_sel [2:0] $end
+$var wire 1 ?" pad_in $end
+$var wire 1 @" periph_in $end
+$var wire 1 A" sig_gpio $end
+$var wire 1 _ sig_snn $end
+$var wire 1 ` sig_tcpwm $end
+$var wire 1 b sig_uart $end
+$var wire 1 B" sig_udb $end
+$var reg 1 C" pad_oe $end
+$var reg 1 D" pad_out $end
+$var reg 1 E" selected_tx $end
+$upscope $end
+$upscope $end
+$scope begin HSIOM_PINS[2] $end
+$var wire 3 F" eff_dm [2:0] $end
+$var wire 3 G" eff_mux [2:0] $end
+$var wire 1 H" is_active_backup $end
+$var wire 1 I" is_faulted_primary $end
+$scope module u_cell $end
+$var wire 3 J" drive_mode [2:0] $end
+$var wire 3 K" mux_sel [2:0] $end
+$var wire 1 L" pad_in $end
+$var wire 1 M" periph_in $end
+$var wire 1 N" sig_gpio $end
+$var wire 1 _ sig_snn $end
+$var wire 1 ` sig_tcpwm $end
+$var wire 1 b sig_uart $end
+$var wire 1 O" sig_udb $end
+$var reg 1 P" pad_oe $end
+$var reg 1 Q" pad_out $end
+$var reg 1 R" selected_tx $end
+$upscope $end
+$upscope $end
+$scope begin HSIOM_PINS[3] $end
+$var wire 3 S" eff_dm [2:0] $end
+$var wire 3 T" eff_mux [2:0] $end
+$var wire 1 U" is_active_backup $end
+$var wire 1 V" is_faulted_primary $end
+$scope module u_cell $end
+$var wire 3 W" drive_mode [2:0] $end
+$var wire 3 X" mux_sel [2:0] $end
+$var wire 1 Y" pad_in $end
+$var wire 1 Z" periph_in $end
+$var wire 1 [" sig_gpio $end
+$var wire 1 _ sig_snn $end
+$var wire 1 ` sig_tcpwm $end
+$var wire 1 b sig_uart $end
+$var wire 1 \" sig_udb $end
+$var reg 1 ]" pad_oe $end
+$var reg 1 ^" pad_out $end
+$var reg 1 _" selected_tx $end
+$upscope $end
+$upscope $end
+$scope begin HSIOM_PINS[4] $end
+$var wire 3 `" eff_dm [2:0] $end
+$var wire 3 a" eff_mux [2:0] $end
+$var wire 1 b" is_active_backup $end
+$var wire 1 c" is_faulted_primary $end
+$scope module u_cell $end
+$var wire 3 d" drive_mode [2:0] $end
+$var wire 3 e" mux_sel [2:0] $end
+$var wire 1 f" pad_in $end
+$var wire 1 g" periph_in $end
+$var wire 1 h" sig_gpio $end
+$var wire 1 _ sig_snn $end
+$var wire 1 ` sig_tcpwm $end
+$var wire 1 b sig_uart $end
+$var wire 1 i" sig_udb $end
+$var reg 1 j" pad_oe $end
+$var reg 1 k" pad_out $end
+$var reg 1 l" selected_tx $end
+$upscope $end
+$upscope $end
+$scope begin HSIOM_PINS[5] $end
+$var wire 3 m" eff_dm [2:0] $end
+$var wire 3 n" eff_mux [2:0] $end
+$var wire 1 o" is_active_backup $end
+$var wire 1 p" is_faulted_primary $end
+$scope module u_cell $end
+$var wire 3 q" drive_mode [2:0] $end
+$var wire 3 r" mux_sel [2:0] $end
+$var wire 1 s" pad_in $end
+$var wire 1 t" periph_in $end
+$var wire 1 u" sig_gpio $end
+$var wire 1 _ sig_snn $end
+$var wire 1 a sig_tcpwm $end
+$var wire 1 b sig_uart $end
+$var wire 1 v" sig_udb $end
+$var reg 1 w" pad_oe $end
+$var reg 1 x" pad_out $end
+$var reg 1 y" selected_tx $end
+$upscope $end
+$upscope $end
+$scope begin HSIOM_PINS[6] $end
+$var wire 3 z" eff_dm [2:0] $end
+$var wire 3 {" eff_mux [2:0] $end
+$var wire 1 |" is_active_backup $end
+$var wire 1 }" is_faulted_primary $end
+$scope module u_cell $end
+$var wire 3 ~" drive_mode [2:0] $end
+$var wire 3 !# mux_sel [2:0] $end
+$var wire 1 "# pad_in $end
+$var wire 1 ## periph_in $end
+$var wire 1 $# sig_gpio $end
+$var wire 1 _ sig_snn $end
+$var wire 1 ` sig_tcpwm $end
+$var wire 1 b sig_uart $end
+$var wire 1 %# sig_udb $end
+$var reg 1 &# pad_oe $end
+$var reg 1 '# pad_out $end
+$var reg 1 (# selected_tx $end
+$upscope $end
+$upscope $end
+$scope begin HSIOM_PINS[7] $end
+$var wire 3 )# eff_dm [2:0] $end
+$var wire 3 *# eff_mux [2:0] $end
+$var wire 1 +# is_active_backup $end
+$var wire 1 ,# is_faulted_primary $end
+$scope module u_cell $end
+$var wire 3 -# drive_mode [2:0] $end
+$var wire 3 .# mux_sel [2:0] $end
+$var wire 1 /# pad_in $end
+$var wire 1 0# periph_in $end
+$var wire 1 1# sig_gpio $end
+$var wire 1 _ sig_snn $end
+$var wire 1 ` sig_tcpwm $end
+$var wire 1 b sig_uart $end
+$var wire 1 2# sig_udb $end
+$var reg 1 3# pad_oe $end
+$var reg 1 4# pad_out $end
+$var reg 1 5# selected_tx $end
+$upscope $end
+$upscope $end
+$scope begin HSIOM_PINS[8] $end
+$var wire 3 6# eff_dm [2:0] $end
+$var wire 3 7# eff_mux [2:0] $end
+$var wire 1 8# is_active_backup $end
+$var wire 1 9# is_faulted_primary $end
+$scope module u_cell $end
+$var wire 3 :# drive_mode [2:0] $end
+$var wire 3 ;# mux_sel [2:0] $end
+$var wire 1 <# pad_in $end
+$var wire 1 =# periph_in $end
+$var wire 1 ># sig_gpio $end
+$var wire 1 _ sig_snn $end
+$var wire 1 ` sig_tcpwm $end
+$var wire 1 b sig_uart $end
+$var wire 1 ?# sig_udb $end
+$var reg 1 @# pad_oe $end
+$var reg 1 A# pad_out $end
+$var reg 1 B# selected_tx $end
+$upscope $end
+$upscope $end
+$scope begin HSIOM_PINS[9] $end
+$var wire 3 C# eff_dm [2:0] $end
+$var wire 3 D# eff_mux [2:0] $end
+$var wire 1 E# is_active_backup $end
+$var wire 1 F# is_faulted_primary $end
+$scope module u_cell $end
+$var wire 3 G# drive_mode [2:0] $end
+$var wire 3 H# mux_sel [2:0] $end
+$var wire 1 I# pad_in $end
+$var wire 1 J# periph_in $end
+$var wire 1 K# sig_gpio $end
+$var wire 1 _ sig_snn $end
+$var wire 1 ` sig_tcpwm $end
+$var wire 1 b sig_uart $end
+$var wire 1 L# sig_udb $end
+$var reg 1 M# pad_oe $end
+$var reg 1 N# pad_out $end
+$var reg 1 O# selected_tx $end
+$upscope $end
+$upscope $end
+$scope begin HSIOM_PINS[10] $end
+$var wire 3 P# eff_dm [2:0] $end
+$var wire 3 Q# eff_mux [2:0] $end
+$var wire 1 R# is_active_backup $end
+$var wire 1 S# is_faulted_primary $end
+$scope module u_cell $end
+$var wire 3 T# drive_mode [2:0] $end
+$var wire 3 U# mux_sel [2:0] $end
+$var wire 1 V# pad_in $end
+$var wire 1 W# periph_in $end
+$var wire 1 X# sig_gpio $end
+$var wire 1 _ sig_snn $end
+$var wire 1 ` sig_tcpwm $end
+$var wire 1 b sig_uart $end
+$var wire 1 Y# sig_udb $end
+$var reg 1 Z# pad_oe $end
+$var reg 1 [# pad_out $end
+$var reg 1 \# selected_tx $end
+$upscope $end
+$upscope $end
+$scope begin HSIOM_PINS[11] $end
+$var wire 3 ]# eff_dm [2:0] $end
+$var wire 3 ^# eff_mux [2:0] $end
+$var wire 1 _# is_active_backup $end
+$var wire 1 `# is_faulted_primary $end
+$scope module u_cell $end
+$var wire 3 a# drive_mode [2:0] $end
+$var wire 3 b# mux_sel [2:0] $end
+$var wire 1 c# pad_in $end
+$var wire 1 d# periph_in $end
+$var wire 1 e# sig_gpio $end
+$var wire 1 _ sig_snn $end
+$var wire 1 ` sig_tcpwm $end
+$var wire 1 b sig_uart $end
+$var wire 1 f# sig_udb $end
+$var reg 1 g# pad_oe $end
+$var reg 1 h# pad_out $end
+$var reg 1 i# selected_tx $end
+$upscope $end
+$upscope $end
+$scope begin HSIOM_PINS[12] $end
+$var wire 3 j# eff_dm [2:0] $end
+$var wire 3 k# eff_mux [2:0] $end
+$var wire 1 l# is_active_backup $end
+$var wire 1 m# is_faulted_primary $end
+$scope module u_cell $end
+$var wire 3 n# drive_mode [2:0] $end
+$var wire 3 o# mux_sel [2:0] $end
+$var wire 1 p# pad_in $end
+$var wire 1 q# periph_in $end
+$var wire 1 r# sig_gpio $end
+$var wire 1 _ sig_snn $end
+$var wire 1 ` sig_tcpwm $end
+$var wire 1 b sig_uart $end
+$var wire 1 s# sig_udb $end
+$var reg 1 t# pad_oe $end
+$var reg 1 u# pad_out $end
+$var reg 1 v# selected_tx $end
+$upscope $end
+$upscope $end
+$scope begin HSIOM_PINS[13] $end
+$var wire 3 w# eff_dm [2:0] $end
+$var wire 3 x# eff_mux [2:0] $end
+$var wire 1 y# is_active_backup $end
+$var wire 1 z# is_faulted_primary $end
+$scope module u_cell $end
+$var wire 3 {# drive_mode [2:0] $end
+$var wire 3 |# mux_sel [2:0] $end
+$var wire 1 }# pad_in $end
+$var wire 1 ~# periph_in $end
+$var wire 1 !$ sig_gpio $end
+$var wire 1 _ sig_snn $end
+$var wire 1 ` sig_tcpwm $end
+$var wire 1 b sig_uart $end
+$var wire 1 "$ sig_udb $end
+$var reg 1 #$ pad_oe $end
+$var reg 1 $$ pad_out $end
+$var reg 1 %$ selected_tx $end
+$upscope $end
+$upscope $end
+$scope begin HSIOM_PINS[14] $end
+$var wire 3 &$ eff_dm [2:0] $end
+$var wire 3 '$ eff_mux [2:0] $end
+$var wire 1 ($ is_active_backup $end
+$var wire 1 )$ is_faulted_primary $end
+$scope module u_cell $end
+$var wire 3 *$ drive_mode [2:0] $end
+$var wire 3 +$ mux_sel [2:0] $end
+$var wire 1 ,$ pad_in $end
+$var wire 1 -$ periph_in $end
+$var wire 1 .$ sig_gpio $end
+$var wire 1 _ sig_snn $end
+$var wire 1 ` sig_tcpwm $end
+$var wire 1 b sig_uart $end
+$var wire 1 /$ sig_udb $end
+$var reg 1 0$ pad_oe $end
+$var reg 1 1$ pad_out $end
+$var reg 1 2$ selected_tx $end
+$upscope $end
+$upscope $end
+$scope begin HSIOM_PINS[15] $end
+$var wire 3 3$ eff_dm [2:0] $end
+$var wire 3 4$ eff_mux [2:0] $end
+$var wire 1 5$ is_active_backup $end
+$var wire 1 6$ is_faulted_primary $end
+$scope module u_cell $end
+$var wire 3 7$ drive_mode [2:0] $end
+$var wire 3 8$ mux_sel [2:0] $end
+$var wire 1 9$ pad_in $end
+$var wire 1 :$ periph_in $end
+$var wire 1 ;$ sig_gpio $end
+$var wire 1 _ sig_snn $end
+$var wire 1 ` sig_tcpwm $end
+$var wire 1 b sig_uart $end
+$var wire 1 <$ sig_udb $end
+$var reg 1 =$ pad_oe $end
+$var reg 1 >$ pad_out $end
+$var reg 1 ?$ selected_tx $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0?$
+0>$
+1=$
+0<$
+0;$
+1:$
+19$
+b0 8$
+b110 7$
+06$
+05$
+b0 4$
+b110 3$
+02$
+01$
+10$
+0/$
+0.$
+1-$
+1,$
+b0 +$
+b110 *$
+0)$
+0($
+b0 '$
+b110 &$
+0%$
+0$$
+1#$
+0"$
+0!$
+1~#
+1}#
+b0 |#
+b110 {#
+0z#
+0y#
+b0 x#
+b110 w#
+0v#
+0u#
+1t#
+0s#
+0r#
+1q#
+1p#
+b0 o#
+b110 n#
+0m#
+0l#
+b0 k#
+b110 j#
+0i#
+0h#
+1g#
+0f#
+0e#
+1d#
+1c#
+b0 b#
+b110 a#
+0`#
+0_#
+b0 ^#
+b110 ]#
+0\#
+0[#
+1Z#
+0Y#
+0X#
+1W#
+1V#
+b0 U#
+b110 T#
+0S#
+0R#
+b0 Q#
+b110 P#
+0O#
+0N#
+1M#
+0L#
+0K#
+1J#
+1I#
+b0 H#
+b110 G#
+0F#
+0E#
+b0 D#
+b110 C#
+0B#
+0A#
+1@#
+0?#
+0>#
+1=#
+1<#
+b0 ;#
+b110 :#
+09#
+08#
+b0 7#
+b110 6#
+05#
+04#
+13#
+02#
+01#
+10#
+1/#
+b0 .#
+b110 -#
+0,#
+0+#
+b0 *#
+b110 )#
+1(#
+1'#
+1&#
+0%#
+0$#
+1##
+1"#
+b10 !#
+b110 ~"
+0}"
+0|"
+b10 {"
+b110 z"
+0y"
+0x"
+1w"
+0v"
+0u"
+1t"
+1s"
+b10 r"
+b110 q"
+0p"
+0o"
+b10 n"
+b110 m"
+0l"
+0k"
+1j"
+0i"
+0h"
+1g"
+1f"
+b0 e"
+b110 d"
+0c"
+0b"
+b0 a"
+b110 `"
+1_"
+1^"
+1]"
+0\"
+0["
+1Z"
+1Y"
+b1 X"
+b110 W"
+0V"
+0U"
+b1 T"
+b110 S"
+1R"
+1Q"
+1P"
+0O"
+0N"
+1M"
+1L"
+b1 K"
+b110 J"
+0I"
+0H"
+b1 G"
+b110 F"
+0E"
+0D"
+1C"
+0B"
+0A"
+1@"
+1?"
+b0 >"
+b110 ="
+0<"
+0;"
+b0 :"
+b110 9"
+08"
+07"
+16"
+05"
+04"
+13"
+12"
+b0 1"
+b110 0"
+0/"
+0."
+b0 -"
+b110 ,"
+0+"
+0*"
+b0 )"
+b0 ("
+1'"
+1&"
+1%"
+b10100 $"
+1#"
+0""
+b111 !"
+0~
+0}
+b0 |
+b0 {
+0z
+b0 y
+0x
+0w
+b0 v
+1u
+b0 t
+bx s
+bx r
+bx q
+bx p
+bx o
+bx n
+bx m
+bx l
+b1000100000000 k
+b0 j
+1i
+b1000100000000 h
+b10000 g
+b10100 f
+1e
+b111 d
+b0 c
+1b
+0a
+1`
+0_
+0^
+bx ]
+bx \
+b0 [
+0Z
+b0 Y
+b0 X
+0W
+0V
+bx U
+bx T
+0S
+bx R
+bx Q
+bx P
+0O
+bx N
+0M
+b0 L
+b1111111111111111 K
+b1001100 J
+b1111111111111111 I
+b1111111111111111 H
+b0 G
+0F
+0E
+b0 D
+0C
+b0 B
+0A
+b0 @
+1?
+0>
+1=
+0<
+0;
+bx :
+bx 9
+08
+07
+06
+bx 5
+bx 4
+03
+bx 2
+bx 1
+00
+b1111111111111111 /
+b0 .
+0-
+1,
+0+
+0*
+b0 )
+b0 (
+0'
+b0 &
+0%
+0$
+b1001100 #
+b1111111111111111 "
+0!
+$end
+#5000
+b10000 g
+1-
+1A
+#10000
+0-
+0A
+#15000
+b10000 g
+1-
+1A
+#20000
+0-
+0A
+10
+1C
+#25000
+1-
+1A
+#30000
+0-
+0A
+#35000
+1-
+1A
+#40000
+0-
+0A
+b1111111111111111 /
+#45000
+1-
+1A
+#50000
+0-
+0A
+#55000
+1-
+1A
+#60000
+1""
+0Z"
+b1111111111110111 K
+0Y"
+0%"
+0-
+0A
+b1111111111110111 /
+b1111111111110111 H
+#65000
+b1 )"
+b1 D
+1-
+1A
+#70000
+0-
+0A
+#75000
+b10 )"
+b10 D
+1-
+1A
+#80000
+0-
+0A
+#85000
+b11 )"
+b11 D
+1-
+1A
+#90000
+0-
+0A
+#95000
+b100 )"
+b100 D
+1-
+1A
+#100000
+0-
+0A
+#105000
+b101 )"
+b101 D
+1-
+1A
+#110000
+0-
+0A
+#115000
+b110 )"
+b110 D
+1-
+1A
+#120000
+0-
+0A
+#125000
+b111 )"
+b111 D
+1-
+1A
+#130000
+0-
+0A
+#135000
+b1000 )"
+b1000 D
+1-
+1A
+#140000
+0-
+0A
+#145000
+b1001 )"
+b1001 D
+1-
+1A
+#150000
+0-
+0A
+#155000
+b1010 )"
+b1010 D
+1-
+1A
+#160000
+0-
+0A
+#165000
+b1011 )"
+b1011 D
+1-
+1A
+#170000
+0-
+0A
+#175000
+b1100 )"
+b1100 D
+1-
+1A
+#180000
+0-
+0A
+#185000
+b1101 )"
+b1101 D
+1-
+1A
+#190000
+0-
+0A
+#195000
+b1110 )"
+b1110 D
+1-
+1A
+#200000
+0-
+0A
+#205000
+b1111 )"
+b1111 D
+1-
+1A
+#210000
+0-
+0A
+#215000
+b10000 )"
+b10000 D
+1-
+1A
+#220000
+0-
+0A
+#225000
+b10001 )"
+b10001 D
+1-
+1A
+#230000
+0-
+0A
+#235000
+b10010 )"
+b10010 D
+1-
+1A
+#240000
+0-
+0A
+#245000
+b10011 )"
+b10011 D
+1-
+1A
+#250000
+0-
+0A
+#255000
+b10100 )"
+b10100 D
+1-
+1A
+#260000
+0-
+0A
+#265000
+0""
+14#
+0&"
+0'"
+15#
+0_"
+0]"
+b1111111111110111 "
+b1111111111110111 I
+0^"
+b11000100 #
+b11000100 J
+b1 *#
+b1 .#
+b0 T"
+b0 X"
+b1 S"
+b1 W"
+1V"
+1+#
+b111 ("
+b111 B
+1*"
+1E
+1+"
+1F
+1!
+b10101 )"
+b10101 D
+1-
+1A
+#270000
+0-
+0A
+#275000
+1-
+1A
+#280000
+0-
+0A
+#285000
+1-
+1A
+#290000
+0-
+0A
+#295000
+1-
+1A
+#300000
+0-
+0A
+#305000
+1-
+1A
+#310000
+0-
+0A
+#315000
+1-
+1A
+#320000
+0-
+0A
+#325000
+1-
+1A
+#330000
+0-
+0A
+#335000
+1-
+1A
+#340000
+0-
+0A
+#345000
+1-
+1A
+#350000
+0-
+0A
+#355000
+1-
+1A
+#360000
+04#
+0Q"
+b1000000 #
+b1000000 J
+05#
+0R"
+0-
+0A
+0?
+0b
+#365000
+1-
+1A
+#370000
+0-
+0A
+#375000
+1-
+1A
+#380000
+0-
+0A

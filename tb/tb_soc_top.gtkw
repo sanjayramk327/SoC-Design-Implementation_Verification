@@ -1,0 +1,84 @@
+[dumpfile] "D:/PROJECTS/SoC/tb/tb_soc_top.vcd"
+[savefile] "D:/PROJECTS/SoC/tb/tb_soc_top.gtkw"
+[timestart] 0
+[size] 1920 1080
+[pos] 0 0
+*0.500000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_soc_top
+[sst_width] 300
+[signals_width] 240
+[sst_expanded] 1
+[sst_vpaned_height] 400
+-Full MorphoSoC System Boot Verification
+@28
+tb_soc_top.clk
+@28
+tb_soc_top.rst_n
+-CPU Subsystem
+@22
+tb_soc_top.dut.u_cpu.pc[31:0]
+@22
+tb_soc_top.dut.u_cpu.instr[31:0]
+@22
+tb_soc_top.dut.u_cpu.alu_result[31:0]
+@22
+tb_soc_top.dut.u_cpu.state[2:0]
+-AXI Interconnect
+@22
+tb_soc_top.dut.u_interconnect.m_axi_awaddr[31:0]
+@28
+tb_soc_top.dut.u_interconnect.m_axi_awvalid
+@28
+tb_soc_top.dut.u_interconnect.m_axi_awready
+@22
+tb_soc_top.dut.u_interconnect.m_axi_wdata[31:0]
+@28
+tb_soc_top.dut.u_interconnect.m_axi_wvalid
+@28
+tb_soc_top.dut.u_interconnect.m_axi_wready
+-UDB 2.0 (Patent 1)
+@28
+tb_soc_top.dut.u_udb.rem_morph_trigger
+@22
+tb_soc_top.dut.u_udb.udb_io_in[7:0]
+@22
+tb_soc_top.dut.u_udb.udb_io_out[7:0]
+@22
+tb_soc_top.dut.u_udb.u_morph.current_context_id[1:0]
+@28
+tb_soc_top.dut.u_udb.u_morph.auto_morph_en
+-Analog / SNN (Patent 2)
+@22
+tb_soc_top.dut.u_analog.snn_class[3:0]
+@22
+tb_soc_top.dut.u_analog.v_amux_a[7:0]
+@22
+tb_soc_top.dut.u_analog.v_amux_b[7:0]
+-UART
+@28
+tb_soc_top.dut.u_uart.uart_tx
+@28
+tb_soc_top.dut.u_uart.uart_tx_done
+-GPIO / HSIOM (Patent 3)
+@28
+tb_soc_top.dut.u_hsiom.hsiom_fault_event
+@22
+tb_soc_top.dut.u_gpio.port_dr[7:0]
+@22
+tb_soc_top.dut.u_gpio.port_ps[7:0]
+-DMA Controller
+@22
+tb_soc_top.dut.u_dma.rem_dma_trig[3:0]
+@22
+tb_soc_top.dut.u_dma.state[1:0]
+@22
+tb_soc_top.dut.u_dma.ch_busy[3:0]
+-PMU / WDT
+@22
+tb_soc_top.dut.u_pmu.pmu_mode_reg[31:0]
+@28
+tb_soc_top.dut.u_pmu.wdt_reset_out
+@28
+tb_soc_top.dut.u_pmu.clock_gate_cpu
+[pattern_trace] 1
+[pattern_trace] 0

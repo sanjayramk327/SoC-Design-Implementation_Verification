@@ -1,0 +1,74 @@
+[dumpfile] "D:/PROJECTS/SoC/tb/tb_smartsense_snn.vcd"
+[savefile] "D:/PROJECTS/SoC/tb/tb_smartsense_snn.gtkw"
+[timestart] 0
+[size] 1600 900
+[pos] 0 0
+*0.500000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_smartsense_snn
+[sst_width] 250
+[signals_width] 200
+[sst_expanded] 1
+[sst_vpaned_height] 400
+-
+-Key Signals
+@28
+tb_smartsense_snn.snn_anomaly
+@22
+tb_smartsense_snn.snn_class
+@28
+tb_smartsense_snn.snn_spike
+@22
+tb_smartsense_snn.amux_v
+@28
+tb_smartsense_snn.clk
+@28
+tb_smartsense_snn.rst_n
+@22
+tb_smartsense_snn.dut.amux_voltage
+@28
+tb_smartsense_snn.dut.clk
+@28
+tb_smartsense_snn.dut.rst_n
+@28
+tb_smartsense_snn.dut.snn_anomaly_flag
+@22
+tb_smartsense_snn.dut.snn_gesture_class
+-Other Signals
+@22
+tb_smartsense_snn.cfg_rdata
+@22
+tb_smartsense_snn.cfg_addr
+@22
+tb_smartsense_snn.cfg_wdata
+@28
+tb_smartsense_snn.cfg_we
+@22
+tb_smartsense_snn.dut.cfg_addr
+@22
+tb_smartsense_snn.dut.cfg_wdata
+@28
+tb_smartsense_snn.dut.cfg_we
+@28
+tb_smartsense_snn.dut.pdm_bit
+@22
+tb_smartsense_snn.dut.baseline_cap
+@22
+tb_smartsense_snn.dut.cfg_rdata
+@22
+tb_smartsense_snn.dut.leak_factor
+@22
+tb_smartsense_snn.dut.membrane_pot
+@22
+tb_smartsense_snn.dut.sigma_acc
+@28
+tb_smartsense_snn.dut.snn_enable
+@28
+tb_smartsense_snn.dut.snn_touch_spike
+@22
+tb_smartsense_snn.dut.spike_count
+@22
+tb_smartsense_snn.dut.threshold_val
+@22
+tb_smartsense_snn.dut.window_timer
+[pattern_trace] 1
+[pattern_trace] 0

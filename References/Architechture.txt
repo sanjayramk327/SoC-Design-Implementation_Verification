@@ -1,0 +1,50 @@
+uart_soc/
+│
+├── rtl/
+│   │
+│   ├── uart/
+│   │   ├── baud_generator.v
+│   │   ├── uart_tx.v
+│   │   ├── uart_rx.v
+│   │   ├── tx_fifo.v
+│   │   ├── rx_fifo.v
+│   │   ├── uart_registers.v
+│   │   ├── interrupt_controller.v
+│   │   ├── axi4lite_slave.v
+│   │   └── uart_top.v
+│   │
+│   ├── dma/
+│   │   ├── dma_controller.v
+│   │   ├── dma_registers.v
+│   │   ├── dma_read_engine.v
+│   │   ├── dma_write_engine.v
+│   │   └── dma_top.v
+│   │
+│   ├── cpu/
+│   │   └── riscv_core.v
+│   │
+│   ├── memory/
+│   │   ├── boot_rom.v
+│   │   ├── instruction_bram.v
+│   │   └── data_bram.v
+│   │
+│   ├── bus/
+│   │   ├── axi_interconnect.v
+│   │   └── axi_crossbar.v
+│   │
+│   ├── peripherals/
+│   │   ├── gpio.v
+│   │   ├── timer.v
+│   │   ├── watchdog.v
+│   │   ├── spi.v
+│   │   └── i2c.v
+│   │
+│   └── system/
+│       ├── clock_manager.v
+│       ├── reset_controller.v
+│       └── cdc_sync.v
+│
+└── tb/
+    ├── tb_dma.v
+    ├── tb_dma_uart.v
+    └── tb_soc.v
